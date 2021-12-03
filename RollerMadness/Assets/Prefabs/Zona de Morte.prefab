@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3521526742869159387}
   m_Layer: 0
   m_Name: Zona de Morte
-  m_TagString: Untagged
+  m_TagString: LimitesMapa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,6 +5,9 @@ public class Health : MonoBehaviour {
 	
 	public enum deathAction {loadLevelWhenDead,doNothingWhenDead};
 	
+	// A
+	public HealthBar healthBar;
+
 	public float healthPoints = 1f;
 	public float respawnHealthPoints = 1f;		//base health points
 	
@@ -32,6 +35,9 @@ public class Health : MonoBehaviour {
 		{
 			LevelToLoad = Application.loadedLevelName;
 		}
+
+		// A
+		healthBar.SetMaxHealth(healthPoints);
 	}
 	
 	// Update is called once per frame
@@ -61,6 +67,7 @@ public class Health : MonoBehaviour {
 					break;
 				}
 				Destroy(gameObject);
+				healthBar.EraseHealthBar();
 			}
 		}
 	}
@@ -68,11 +75,17 @@ public class Health : MonoBehaviour {
 	public void ApplyDamage(float amount)
 	{	
 		healthPoints = healthPoints - amount;	
+
+		// A
+		healthBar.SetHealth(healthPoints);
 	}
 	
 	public void ApplyHeal(float amount)
 	{
 		healthPoints = healthPoints + amount;
+
+		// A
+		healthBar.SetHealth(healthPoints);
 	}
 
 	public void ApplyBonusLife(int amount)

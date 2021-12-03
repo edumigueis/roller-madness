@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &695493975932394356
+--- !u!1 &3271050375743204197
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 695493975931897684}
-  - component: {fileID: 695493975933192052}
-  - component: {fileID: 695493975934322100}
-  - component: {fileID: 695493975930139508}
+  - component: {fileID: 3271050375743204207}
+  - component: {fileID: 3271050375743204192}
+  - component: {fileID: 3271050375743204193}
+  - component: {fileID: 3271050375743204194}
+  - component: {fileID: 3271050375743204195}
+  - component: {fileID: -4587231376314613144}
   m_Layer: 0
   m_Name: Tulla Luana
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &695493975931897684
+--- !u!4 &3271050375743204207
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695493975932394356}
+  m_GameObject: {fileID: 3271050375743204197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.642956, y: 0, z: 10.1442375}
+  m_LocalPosition: {x: 0, y: 0, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &695493975933192052
+--- !u!33 &3271050375743204192
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695493975932394356}
+  m_GameObject: {fileID: 3271050375743204197}
   m_Mesh: {fileID: 4300002, guid: c09052c9b19f0ea4987bc4f4f981252f, type: 3}
---- !u!23 &695493975934322100
+--- !u!23 &3271050375743204193
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695493975932394356}
+  m_GameObject: {fileID: 3271050375743204197}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
@@ -60,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f894cb2a1f8b8234bb46d608b35777e3, type: 2}
+  - {fileID: 2100000, guid: 8e0fc703ac194124ea3dd4fad7c8c121, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,16 +84,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &695493975930139508
+--- !u!65 &3271050375743204194
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695493975932394356}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 3271050375743204197}
+  m_Material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
   m_Center: {x: 0, y: 4, z: 0}
+--- !u!114 &3271050375743204195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3271050375743204197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72efb9e0cf1734f0988c6069f6220681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  healthPoints: 25
+  respawnHealthPoints: 1
+  numberOfLives: 1
+  isAlive: 1
+  explosionPrefab: {fileID: 3739345856957550455, guid: b60cefbe1a6231a45ad6794b6cd14d32, type: 3}
+  onLivesGone: 1
+  LevelToLoad: 
+--- !u!114 &-4587231376314613144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3271050375743204197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18380d6e112748c4e9bb444cbf574a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 3271050375743204197}
+  player: {fileID: 1926689842337500292, guid: 19cf8885416247545bbf32262d5de420, type: 3}
+  bossFullLife: {fileID: 2100000, guid: 8e0fc703ac194124ea3dd4fad7c8c121, type: 2}
+  bossHalfLife: {fileID: 2100000, guid: 9375b9867f1bfdb4d979360ae80f21a1, type: 2}
+  bossDying: {fileID: 2100000, guid: 998cff4784c58274ca716e93d1361d41, type: 2}
+  bossDead: {fileID: 2100000, guid: dc182f05bf2620146bdffa43bea44365, type: 2}
+  bossAttacking: {fileID: 2100000, guid: 0613fb8cfcb13e441b8e26a3be3baf71, type: 2}
