@@ -45,4 +45,10 @@ public class Chaser : MonoBehaviour {
 		target = newTarget;
 	}
 
+	// Set the speed of the chaser
+	public void SetSpeed(float newSpeed)
+	{
+		speed = newSpeed;
+	}
+
 }

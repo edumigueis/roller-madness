@@ -31,12 +31,28 @@ public class SpawnGameObjects : MonoBehaviour {
 
 	void MakeThingToSpawn()
 	{
+		string playerDifficulty = PlayerPrefs.GetString("Difficulty");
 		// create a new gameObject
 		GameObject clone = Instantiate(spawnPrefab, transform.position, transform.rotation) as GameObject;
 
 		// set chaseTarget if specified
 		if ((chaseTarget != null) && (clone.gameObject.GetComponent<Chaser> () != null))
 		{
+			switch(playerDifficulty)
+			{
+				case "Rookie":
+					clone.gameObject.GetComponent<Chaser>().SetSpeed(2f);
+					break;
+				case "Easy":
+					clone.gameObject.GetComponent<Chaser>().SetSpeed(3.5f);
+					break;
+				case "Normal":
+					clone.gameObject.GetComponent<Chaser>().SetSpeed(5f);
+					break;
+				case "Hard":
+					clone.gameObject.GetComponent<Chaser>().SetSpeed(6f);
+					break;
+			}
 			clone.gameObject.GetComponent<Chaser>().SetTarget(chaseTarget);
 		}
 	}

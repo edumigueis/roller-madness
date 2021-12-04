@@ -23,6 +23,11 @@ public class BossHandler : MonoBehaviour
     private float totalHealth;
     private float currentHealth;
 
+    [HideInInspector]
+    public float timeBetweenSpawn;
+    [HideInInspector]
+    public float timeBetweenPower;
+
     private bool attacking = false;
     private bool spawning = false;
     private bool powerAttacking = false;
@@ -34,6 +39,28 @@ public class BossHandler : MonoBehaviour
         totalHealth   = boss.GetComponent<Health>().healthPoints;
         currentHealth = boss.GetComponent<Health>().healthPoints;
         bossBattleBegin.Play();
+
+        string playerDifficulty = PlayerPrefs.GetString("Difficulty");
+
+        switch(playerDifficulty)
+		{
+			case "Rookie":
+				timeBetweenSpawn = 25f;
+                timeBetweenPower = 30f;
+				break;
+			case "Easy":
+				timeBetweenSpawn = 20f;
+                timeBetweenPower = 30f;
+				break;
+			case "Normal":
+				timeBetweenSpawn = 15f;
+                timeBetweenPower = 25f;
+				break;
+			case "Hard":
+				timeBetweenSpawn = 10f;
+                timeBetweenPower = 20f;
+				break;
+		}
     }
 
     void Update()
@@ -67,18 +94,18 @@ public class BossHandler : MonoBehaviour
 
         timePassedSpawn += Time.deltaTime;
         timePassedPower += Time.deltaTime;
-        if(timePassedSpawn > 15f)
+        if(timePassedSpawn > timeBetweenSpawn)
         {
             SpawnEnemiesAttack();
-            timePassedSpawn -= 15f;
+            timePassedSpawn -= timeBetweenSpawn;
         }
         if(timePassedSpawn > 3f && spawning)
             StopSpawnEnemies();
 
-        if(timePassedPower > 25f)
+        if(timePassedPower > timeBetweenPower)
         {
             PowerAttack();
-            timePassedPower -= 25f;
+            timePassedPower -= timeBetweenPower;
         }
         if(timePassedPower > 3f && powerAttacking)
             PowerAttackFinish();

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	[Tooltip("If not set, the player will default to the gameObject tagged as Player.")]
 	public GameObject player;
+	private GameObject boss;
 
 	public enum gameStates {Playing, Death, GameOver, BeatLevel};
 	public gameStates gameState = gameStates.Playing;
@@ -16,6 +17,10 @@ public class GameManager : MonoBehaviour {
 	public int score=0;
 	public bool canBeatLevel = false;
 	public int beatLevelScore=0;
+
+	public enum levels {Fase1, Fase2};
+	public levels level = levels.Fase1;
+
 
 	public GameObject mainCanvas;
 	public Text mainScoreDisplay;
@@ -32,6 +37,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip beatLevelSFX;
 
 	private Health playerHealth;
+	private Health bossHealth;
 
 	void Start () {
 		if (gm == null) 
@@ -41,7 +47,63 @@ public class GameManager : MonoBehaviour {
 			player = GameObject.FindWithTag("Player");
 		}
 
+		if (level == levels.Fase2) {
+			boss = GameObject.FindWithTag("Boss");
+			bossHealth = boss.GetComponent<Health>();
+		}
+
+
 		playerHealth = player.GetComponent<Health>();
+
+		string playerDifficulty = PlayerPrefs.GetString("Difficulty");
+
+        switch(playerDifficulty)
+		{
+			case "Rookie":
+				playerHealth.numberOfLives = 3;
+				if (level == levels.Fase1) {
+					beatLevelScore = 5;
+				}
+				else if (level == levels.Fase2) {
+					beatLevelScore = 10;
+					bossHealth.healthPoints = 10f;
+				}
+				Debug.Log("Rookie");
+				break;
+			case "Easy":
+				playerHealth.numberOfLives = 2;
+				if (level == levels.Fase1) {
+					beatLevelScore = 7;
+				}
+				else if (level == levels.Fase2) {
+					beatLevelScore = 15;
+					bossHealth.healthPoints = 15f;
+				}
+				Debug.Log("Easy");
+				break;
+			case "Normal":
+				playerHealth.numberOfLives = 1;
+				if (level == levels.Fase1) {
+					beatLevelScore = 10;
+				}
+				else if (level == levels.Fase2) {
+					beatLevelScore = 25;
+					bossHealth.healthPoints = 25f;
+				}
+				Debug.Log("Normal");
+				break;
+			case "Hard":
+				playerHealth.numberOfLives = 1;
+				if (level == levels.Fase1) {
+					beatLevelScore = 15;
+				}
+				else if (level == levels.Fase2) {
+					beatLevelScore = 35;
+					bossHealth.healthPoints = 35;
+				}
+				Debug.Log("Hard");
+				break;
+		}
 
 		// setup score display
 		Collect (0);

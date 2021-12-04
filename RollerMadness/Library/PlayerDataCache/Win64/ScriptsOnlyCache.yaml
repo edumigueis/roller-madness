@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - BossHandler
     - Chaser
     - Damage
+    - DifficultySettings
     - GameManager
     - Health
     - HealthBar
@@ -58,6 +59,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -65,6 +68,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 96
       Script: {instanceID: 0}
@@ -89,27 +96,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2316}
     - Class: 114
-      Script: {instanceID: 2420}
+      Script: {instanceID: 2422}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 3032}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 4166}
+      Script: {instanceID: 4170}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4322}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,6 +166,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -166,6 +175,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 96
       Script: {instanceID: 0}
@@ -192,35 +205,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2316}
     - Class: 114
-      Script: {instanceID: 2420}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2652}
+      Script: {instanceID: 2422}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3980}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 4166}
+      Script: {instanceID: 3984}
     - Class: 114
-      Script: {instanceID: 4182}
+      Script: {instanceID: 4170}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4186}
     - Class: 114
-      Script: {instanceID: 33528}
+      Script: {instanceID: 4322}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -236,6 +249,67 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Inicio.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1480}
+    - Class: 114
+      Script: {instanceID: 1482}
+    - Class: 114
+      Script: {instanceID: 1520}
+    - Class: 114
+      Script: {instanceID: 2316}
+    - Class: 114
+      Script: {instanceID: 2422}
+    - Class: 114
+      Script: {instanceID: 2774}
+    - Class: 114
+      Script: {instanceID: 2854}
+    - Class: 114
+      Script: {instanceID: 3066}
+    - Class: 114
+      Script: {instanceID: 3104}
+    - Class: 114
+      Script: {instanceID: 3302}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -510,6 +584,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Effects
     className: ExplosionPhysicsForce
+  - hash:
+      serializedVersion: 2
+      Hash: 8406bb927bc09d71787c8c8b3c065307
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossBullet
   - hash:
       serializedVersion: 2
       Hash: 14d684e5eb706041b258044f3a2d3861
@@ -800,6 +880,12 @@ ScriptsOnlyBuild:
     className: FireLight
   - hash:
       serializedVersion: 2
+      Hash: 364d158260ca878b463b048da4865e49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DifficultySettings
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -926,7 +1012,7 @@ ScriptsOnlyBuild:
     className: Damage
   - hash:
       serializedVersion: 2
-      Hash: edf051d62f6ec3e41bfe4a0fafaec8be
+      Hash: 801d9f21462dfeb73b0e91df6d00fbd4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1124,7 +1210,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: a7507d8de7c98b775b3a7a53b55c2d55
+      Hash: 19dd377a94d7743932ff2c8a040f8637
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossHandler
@@ -1272,14 +1358,9 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: SimpleActivatorMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 8406bb927bc09d71787c8c8b3c065307
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossBullet
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Fase2.unity
+  - Assets/Scenes/Inicio.unity
   - Assets/Scenes/Fase1.unity
-  playerPath: C:/Users/enzos/Unity Projects/roller-madness/RollerMadness.exe
+  - Assets/Scenes/Fase2.unity
+  playerPath: C:/Users/enzos/Unity Projects/roller-madness/Jogo/RollerMadness.exe

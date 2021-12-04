@@ -13,6 +13,11 @@ public class TreasureDamage : MonoBehaviour {
 
     private bool isColetado = false;
 
+	void Start()
+	{
+		boss = GameObject.FindWithTag("Boss");
+	}
+
 	void Update()
     {
 		if (isColetado)
@@ -35,17 +40,19 @@ public class TreasureDamage : MonoBehaviour {
 			{
 				// tell the game manager to Collect
 				GameManager.gm.Collect (value);
+
+
+				if (boss.GetComponent<Health> () != null) {
+					boss.GetComponent<Health> ().ApplyDamage (value);
+					Debug.Log(boss.GetComponent<Health>().healthPoints);
+				}
 			}
 			
 			isColetado = true;
 		}
 
         // A
-        if (other.gameObject.tag == "Boss") {
-			// A
-            if (other.gameObject.GetComponent<Health> () != null)
-				other.gameObject.GetComponent<Health> ().ApplyDamage (value);
-
+        if (other.gameObject.tag == "Boss") {           
 			// explode if specified
 			if (explosionPrefab != null) {
 				Instantiate (explosionPrefab, transform.position, Quaternion.identity);

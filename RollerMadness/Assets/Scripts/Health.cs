@@ -9,6 +9,7 @@ public class Health : MonoBehaviour {
 	public HealthBar healthBar;
 
 	public float healthPoints = 1f;
+	private float totalHealth;
 	public float respawnHealthPoints = 1f;		//base health points
 	
 	public int numberOfLives = 1;					//lives and variables for respawning
@@ -36,13 +37,16 @@ public class Health : MonoBehaviour {
 			LevelToLoad = Application.loadedLevelName;
 		}
 
-		// A
-		healthBar.SetMaxHealth(healthPoints);
+		if (healthBar != null)
+			healthBar.SetMaxHealth(healthPoints);
+		totalHealth = healthPoints;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (healthBar != null)
+			healthBar.SetMax(totalHealth);
 		if (healthPoints <= 0) {				// if the object is 'dead'
 			numberOfLives--;					// decrement # of lives, update lives GUI
 			
@@ -67,7 +71,9 @@ public class Health : MonoBehaviour {
 					break;
 				}
 				Destroy(gameObject);
-				healthBar.EraseHealthBar();
+
+				if (healthBar != null)
+					healthBar.EraseHealthBar();
 			}
 		}
 	}
@@ -77,7 +83,10 @@ public class Health : MonoBehaviour {
 		healthPoints = healthPoints - amount;	
 
 		// A
-		healthBar.SetHealth(healthPoints);
+		if (healthBar != null) {
+			healthBar.SetHealth(healthPoints);
+			healthBar.SetMax(totalHealth);
+		}
 	}
 	
 	public void ApplyHeal(float amount)
@@ -85,7 +94,10 @@ public class Health : MonoBehaviour {
 		healthPoints = healthPoints + amount;
 
 		// A
-		healthBar.SetHealth(healthPoints);
+		if (healthBar != null) {
+			healthBar.SetHealth(healthPoints);
+			healthBar.SetMax(totalHealth);
+		}
 	}
 
 	public void ApplyBonusLife(int amount)

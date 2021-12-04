@@ -1634,6 +1634,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b395dac35b145254980a243e7daeaf1f, type: 3}
+--- !u!1 &1189706846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5612599856551678022, guid: b395dac35b145254980a243e7daeaf1f, type: 3}
+  m_PrefabInstance: {fileID: 1189706845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1189706847
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189706846}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &1189706848
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189706846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87ea513d38bd9804b925cdb6e76c4f18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1202298161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5612599856551709798, guid: b395dac35b145254980a243e7daeaf1f, type: 3}
@@ -1785,7 +1825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Parab\xE9ns!"
+  m_Text: Finished Level!
 --- !u!222 &1236989147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2104,7 +2144,8 @@ MonoBehaviour:
   gameState: 0
   score: 0
   canBeatLevel: 1
-  beatLevelScore: 2
+  beatLevelScore: 10
+  level: 0
   mainCanvas: {fileID: 186499019}
   mainScoreDisplay: {fileID: 518983169}
   gameOverCanvas: {fileID: 2025444140}

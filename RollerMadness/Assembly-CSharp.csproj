@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\SpawnGameObjects.cs" />
      <Compile Include="Assets\Scripts\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Scripts\BossBullet.cs" />
      <Compile Include="Assets\Scripts\TriggerLevelLoad.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\MouseLockCursor.cs" />
@@ -53,7 +54,7 @@
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\TreasureDamage.cs" />
-     <Compile Include="Assets\Scripts\BossBullet.cs" />
+     <Compile Include="Assets\Scripts\DifficultySettings.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
